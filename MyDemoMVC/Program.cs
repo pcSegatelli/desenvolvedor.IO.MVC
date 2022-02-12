@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyDemo
+namespace MyDemoMVC
 {
     public class Program
     {
