@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using MyDemoMVC.Data;
 
 namespace MyDemoMVC
 {
@@ -24,6 +26,9 @@ namespace MyDemoMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<MyDemoMVCContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MyDemoMVCContext")));
             //services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);
         }
 
