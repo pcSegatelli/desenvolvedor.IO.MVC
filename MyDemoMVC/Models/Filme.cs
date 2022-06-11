@@ -18,7 +18,7 @@ namespace MyDemoMVC.Models
 
         [DataType(DataType.Date, ErrorMessage = "Data em formato incorreto")]
         [Required(ErrorMessage = "O campo Data de Lancamento eh obrigatorio")]
-        [Display(Name = "Data de Lançamneto")]
+        [Display(Name = "Data de Lançamento")]
         public DateTime Datalancamento { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z\u00C0-\u00FF**'\w-]*$", ErrorMessage = "Genero em formato inválido")] //Primeira letra tem que ser de A a Z maiuscula e as outras podem ser de a a z minusculas ou maiusculas e aceitando as acentuações
@@ -33,7 +33,7 @@ namespace MyDemoMVC.Models
         
         [Required(ErrorMessage = "Preencha o campo Avaliação")]
         [Display(Name ="Avaliação")]
-        [RegularExpression("@^[0-5]*$", ErrorMessage = "Somente números")] //numero de 0 a 5
+        [RegularExpression(@"^[0-5]*$", ErrorMessage = "Somente números")] //numero de 0 a 5
         public int Avaliacao { get; set; }
     }
 }
